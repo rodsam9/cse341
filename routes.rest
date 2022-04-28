@@ -12,3 +12,13 @@ http://localhost:3000/contacts/62677be579d96f9db268403b
 http://localhost:3000/contacts/62677be579d96f9db268403a
 
 #Heroku deploy GET
+https://cse341-contact-info.herokuapp.com/contacts
+
+###GET
+https://cse341-contact-info.herokuapp.com/contacts/62677be579d96f9db268403c
+
+###GET
+https://cse341-contact-info.herokuapp.com/contacts/62677be579d96f9db268403b
+
+###GET
+https://cse341-contact-info.herokuapp.com/contacts/62677be579d96f9db268403a
