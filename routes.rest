@@ -1,0 +1,14 @@
+
+#Localhost GET
+http://localhost:3000/contacts/ 
+
+###GET
+http://localhost:3000/contacts/62677be579d96f9db268403c
+
+###GET
+http://localhost:3000/contacts/62677be579d96f9db268403b
+
+###GET
+http://localhost:3000/contacts/62677be579d96f9db268403a
+
+#Heroku deploy GET
