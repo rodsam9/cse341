@@ -1,23 +1,25 @@
 const express = require('express');
-const bodyParser = require('body-parser');
-const mongodb = require('./db/connect');
-
-const port = process.env.PORT || 3000;
 const app = express();
+const port = process.env.PORT || 3000;
 
-app
-    .use(bodyParser.json())
-    .use((req, res, next) => {
-        res.setHeader('Access-Control-Allow-Origin', '*');
-        next();
-    })
-    .use('/', require('./routes'));
 
-mongodb.initDb((err, mongodb) => {
-    if (err) {
-        console.log(err);
-    } else {
-        app.listen(port);
-        console.log(`Connected to DB and listening on ${port}`);
-    }
+app.use('/', require('./routes'));
+
+app.listen(port, () => {
+    console.log(`App listening on port ${port}`)
+});
+
+const dotenv = require('dotenv');
+dotenv.config();
+
+const MongoClient = require('mongodb').MongoClient;
+
+MongoClient.connect(process.env.MONGO_URI, function (err, db) {
+    if (err) throw err;
+    var dbo = db.db("contacts");
+    dbo.collection("contacts").find().toArray(function (err, result) {
+        if (err) throw err;
+        console.log(result);
+        db.close();
+    });
 });
