@@ -18,4 +18,9 @@ routes.get('/', (req, res) => {
     });
 });
 
+routes.get('/:id', (req, res) => {
+
+});
+
+
 module.exports = routes;
