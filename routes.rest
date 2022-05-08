@@ -12,8 +12,7 @@ http://localhost:3000/contacts/62677be579d96f9db268403b
 http://localhost:3000/contacts/62677be579d96f9db268403a
 
 #Heroku deploy
-###GET
-https://cse341-contact-info.herokuapp.com/contacts
+
 
 ###GET
 https://cse341-contact-info.herokuapp.com/contacts/62677be579d96f9db268403c
@@ -23,3 +22,64 @@ https://cse341-contact-info.herokuapp.com/contacts/62677be579d96f9db268403b
 
 ###GET
 https://cse341-contact-info.herokuapp.com/contacts/62677be579d96f9db268403a
+
+
+###POST
+POST http://localhost:3000/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Lucas",
+    "lastName":"Anderson",
+    "email":"lucasboy@gmail.com",
+    "favoriteColor":"Orange",
+    "birthday":"10/10/10"
+}
+
+###PUT
+PUT http://localhost:3000/contacts/62771fdc6d9fde89d135536e HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Andrew",
+    "lastName": "Guzman",
+    "email": "guzmanandrew@gmail.com",
+    "favoriteColor": "Blue",
+    "birthday": "02/15/01"
+}
+
+###DELETE
+DELETE http://localhost:3000/contacts/62771fdc6d9fde89d135536e HTTP/1.1
+
+
+// HEROKU DEPLOYMENT
+
+###GET
+https://cse341-contact-info.herokuapp.com/contacts
+
+### POST
+POST https://cse341-contact-info.herokuapp.com/contacts/62771fdc6d9fde89d135536e HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Andrew",
+    "lastName": "Guzman",
+    "email": "guzmanandrew@gmail.com",
+    "favoriteColor": "Orange",
+    "birthday": "02/15/01"
+}
+
+###PUT
+PUT https://cse341-contact-info.herokuapp.com/contacts/62771fdc6d9fde89d135536e HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Andrew",
+    "lastName": "Guzman",
+    "email": "andrew123@gmail.com",
+    "favoriteColor": "Black",
+    "birthday": "10/17/08"
+}
+
+###DELETE
+DELETE https://cse341-contact-info.herokuapp.com/contacts/62771fdc6d9fde89d135536e HTTP/1.1
